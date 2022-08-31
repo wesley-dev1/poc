@@ -17,18 +17,15 @@ public static final int TIMEOUT = 300;
  * Bloco
  *
  * @author Wesley Miranda De Oliveira
- * @since 31/08/2022 07:59:43
+ * @since 31/08/2022 14:11:08
  *
  */
 public static Var Executar() throws Exception {
  return new Callable<Var>() {
 
-   private Var item = Var.VAR_NULL;
-
    public Var call() throws Exception {
-    item =
-    cronapi.util.Operations.getCurrentUserName();
-    return item;
+    return
+cronapi.util.Operations.getCurrentUserName();
    }
  }.call();
 }
