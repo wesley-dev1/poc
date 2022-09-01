@@ -10,7 +10,7 @@ window.blockly.js.blockly.BlocoDataInsercao = window.blockly.js.blockly.BlocoDat
  *
  *
  * @author Wesley Miranda De Oliveira
- * @since 31/08/2022 14:10:21
+ * @since 01/09/2022 00:11:20
  *
  */
 window.blockly.js.blockly.BlocoDataInsercao.ExecutarArgs = [];
@@ -19,5 +19,8 @@ window.blockly.js.blockly.BlocoDataInsercao.Executar = async function() {
   //
   item = this.cronapi.dateTime.getNow();
   //
-  this.cronapi.screen.changeValueOfField("COMENTARIO_POCGrid.active.dataInsercaoComentario", item);
+  if (this.cronapi.screen.getValueOfField("COMENTARIO_POCGrid.active.dataInsercaoComentario") == null) {
+    //
+    this.cronapi.screen.changeValueOfField("COMENTARIO_POCGrid.active.dataInsercaoComentario", item);
+  }
 }

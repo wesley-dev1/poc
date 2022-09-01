@@ -14,18 +14,50 @@ public static final int TIMEOUT = 300;
 
 /**
  *
+ * @author Wesley Miranda De Oliveira
+ * @since 01/09/2022 01:14:23
+ *
+ */
+public static Var fa_C3_A7a_algo() throws Exception {
+ return new Callable<Var>() {
+
+   private Var item = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+    item =
+    cronapi.dateTime.Operations.formatDateTime2(
+    cronapi.dateTime.Operations.getNow(),
+    Var.valueOf(""),
+    Var.valueOf("true"));
+    if (
+    cronapi.logic.Operations.isNullOrEmpty(
+    cronapi.screen.Operations.getValueOfField(
+    Var.valueOf("COMENTARIO_POCGrid.active.dataInsercaoComentario"))).getObjectAsBoolean()) {
+        cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.changeValueOfField"),
+        Var.valueOf("COMENTARIO_POCGrid.active.dataInsercaoComentario"), item);
+    }
+    cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.changeValueOfField"),
+    Var.valueOf("COMENTARIO_POCGrid.active.dataUltimaAtualizacaoComentario"), item);
+    return Var.VAR_NULL;
+   }
+ }.call();
+}
+
+/**
+ *
  * Bloco
  *
  * @author Wesley Miranda De Oliveira
- * @since 31/08/2022 14:11:08
+ * @since 01/09/2022 01:14:23
  *
  */
-public static Var Executar() throws Exception {
+public static Var userOn() throws Exception {
  return new Callable<Var>() {
 
    public Var call() throws Exception {
     return
-cronapi.util.Operations.getCurrentUserName();
+cronapi.database.Operations.query(Var.valueOf("app.entity.User"),Var.valueOf("select u.name from User u where u.userName = :userName"),Var.valueOf("userName",
+cronapi.util.Operations.getCurrentUserName()));
    }
  }.call();
 }

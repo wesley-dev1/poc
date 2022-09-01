@@ -1,0 +1,124 @@
+{
+  "customId": "comentario",
+  "queryName": "comentario",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "COMENTARIO_POC",
+  "entityFullName": "app.entity.COMENTARIO_POC",
+  "query": {
+    "isValid": true,
+    "rulesEntity": [
+      {
+        "entity": "COMENTARIO_POC",
+        "alias": "c",
+        "namespace": "app.entity.COMENTARIO_POC"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "c"
+      }
+    ],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "not": false,
+      "valid": true,
+      "rules": []
+    }
+  },
+  "queryParamsValues": [],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "comentario": null,
+    "autorComentario": {
+      "type": "server",
+      "blocklyMethod": "userOn",
+      "blocklyClass": "blockly.Bloco",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.Bloco",
+        "sourcePath": "src/main/java/blockly/Bloco.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "userOn",
+            "hasReturn": "true",
+            "params": []
+          },
+          {
+            "name": "faça algo",
+            "hasReturn": "true",
+            "params": []
+          }
+        ]
+      },
+      "blocklyGETMethod": null,
+      "blocklyPOSTMethod": null,
+      "blocklyPUTMethod": null,
+      "blocklyDELETEMethod": null,
+      "blocklyFILTERMethod": null,
+      "blocklyCOUNTMethod": null
+    },
+    "dataInsercaoComentario": null,
+    "dataUltimaAtualizacaoComentario": null,
+    "poC": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "comentario": null,
+    "autorComentario": null,
+    "dataInsercaoComentario": null,
+    "dataUltimaAtualizacaoComentario": null,
+    "poC": null
+  },
+  "security": {
+    "id": null,
+    "comentario": null,
+    "autorComentario": null,
+    "dataInsercaoComentario": null,
+    "dataUltimaAtualizacaoComentario": null,
+    "poC": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query985211/",
+  "audit": false,
+  "swagger": false
+}
