@@ -15,7 +15,7 @@ public static final int TIMEOUT = 300;
 /**
  *
  * @author Wesley Miranda De Oliveira
- * @since 01/09/2022 01:59:34
+ * @since 01/09/2022 09:59:06
  *
  */
 public static Var fa_C3_A7a_algo() throws Exception {
@@ -39,12 +39,12 @@ public static Var fa_C3_A7a_algo() throws Exception {
     cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.changeValueOfField"),
     Var.valueOf("COMENTARIO_POCGrid.active.dataUltimaAtualizacaoComentario"), item);
     cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.changeValueOfField"),
-    Var.valueOf("COMENTARIO_POCGrid.active.autorComentario"),
+    Var.valueOf("COMENTARIO_POCGrid.active.autorComentario_name"),
     cronapi.list.Operations.getFirst((
     cronapi.database.Operations.query(Var.valueOf("app.entity.User"),Var.valueOf("select u.name from User u where u.userName = :userName"),Var.valueOf("userName",
     cronapi.util.Operations.getCurrentUserName())))));
     cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.changeValueOfField"),
-    Var.valueOf("COMENTARIO_POCGrid.active.autorComentario_name"),
+    Var.valueOf("COMENTARIO_POCGrid.active.autorComentario"),
     cronapi.list.Operations.getFirst((
     cronapi.database.Operations.query(Var.valueOf("app.entity.User"),Var.valueOf("select u.name from User u where u.userName = :userName"),Var.valueOf("userName",
     cronapi.util.Operations.getCurrentUserName())))));
@@ -58,14 +58,17 @@ public static Var fa_C3_A7a_algo() throws Exception {
  * Bloco
  *
  * @author Wesley Miranda De Oliveira
- * @since 01/09/2022 01:59:34
+ * @since 01/09/2022 09:59:06
  *
  */
 public static Var userOn() throws Exception {
  return new Callable<Var>() {
 
    public Var call() throws Exception {
-    return Var.VAR_NULL;
+    return
+cronapi.list.Operations.getFirst((
+cronapi.database.Operations.query(Var.valueOf("app.entity.User"),Var.valueOf("select u.name from User u where u.userName = :userName"),Var.valueOf("userName",
+cronapi.util.Operations.getCurrentUserName()))));
    }
  }.call();
 }
