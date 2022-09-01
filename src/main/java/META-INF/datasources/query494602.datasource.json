@@ -1,0 +1,160 @@
+{
+  "customId": "obterUser",
+  "queryName": "useron",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "User",
+  "entityFullName": "app.entity.User",
+  "query": {
+    "isValid": true,
+    "rulesEntity": [
+      {
+        "entity": "User",
+        "alias": "u",
+        "namespace": "app.entity.User"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "u"
+      }
+    ],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "not": false,
+      "valid": true,
+      "rules": []
+    }
+  },
+  "queryParamsValues": [],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "accessFailedCount": null,
+    "email": null,
+    "emailConfirmed": null,
+    "lockoutEnabled": null,
+    "lockoutEnd": null,
+    "name": {
+      "type": "server",
+      "blocklyMethod": "userOn",
+      "blocklyClass": "blockly.Bloco",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.Bloco",
+        "sourcePath": "src/main/java/blockly/Bloco.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "userOn",
+            "hasReturn": "true",
+            "params": []
+          },
+          {
+            "name": "faça algo",
+            "hasReturn": "true",
+            "params": []
+          }
+        ]
+      },
+      "blocklyGETMethod": null,
+      "blocklyPOSTMethod": null,
+      "blocklyPUTMethod": null,
+      "blocklyDELETEMethod": null,
+      "blocklyFILTERMethod": null,
+      "blocklyCOUNTMethod": null
+    },
+    "normalizedEmail": null,
+    "normalizedUserName": null,
+    "password": null,
+    "passwordHistory": null,
+    "phoneNumber": null,
+    "phoneNumberConfirmed": null,
+    "securityStamp": null,
+    "twoFactorEnabled": null,
+    "userName": null,
+    "theme": null,
+    "picture": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "accessFailedCount": null,
+    "email": null,
+    "emailConfirmed": null,
+    "lockoutEnabled": null,
+    "lockoutEnd": null,
+    "name": null,
+    "normalizedEmail": null,
+    "normalizedUserName": null,
+    "password": null,
+    "passwordHistory": null,
+    "phoneNumber": null,
+    "phoneNumberConfirmed": null,
+    "securityStamp": null,
+    "twoFactorEnabled": null,
+    "userName": null,
+    "theme": null,
+    "picture": null
+  },
+  "security": {
+    "id": null,
+    "accessFailedCount": null,
+    "email": null,
+    "emailConfirmed": null,
+    "lockoutEnabled": null,
+    "lockoutEnd": null,
+    "name": null,
+    "normalizedEmail": null,
+    "normalizedUserName": null,
+    "password": null,
+    "passwordHistory": null,
+    "phoneNumber": null,
+    "phoneNumberConfirmed": null,
+    "securityStamp": null,
+    "twoFactorEnabled": null,
+    "userName": null,
+    "theme": null,
+    "picture": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query494602/",
+  "audit": false,
+  "swagger": false
+}
