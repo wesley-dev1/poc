@@ -3,6 +3,7 @@
     <persistence-unit name="app" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <non-jta-data-source>java:comp/env/jdbc/main</non-jta-data-source>
+        <class>app.entity.CHECKLIST</class>
         <class>app.entity.UserRole</class>
         <class>app.entity.COMENTARIO_POC</class>
         <class>app.entity.ApplicationUser</class>
@@ -20,7 +21,6 @@
         <class>app.entity.Device</class>
         <class>app.entity.Role</class>
         <class>app.entity.STATUS_POC</class>
-        <class>app.entity.CHECKLIST</class>
         <class>app.entity.Application</class>
         <properties>
             <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>

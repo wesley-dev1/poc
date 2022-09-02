@@ -844,8 +844,10 @@
     {
       "angle": 0,
       "attributes": [
+        "id:java.lang.String",
         "item:java.lang.String",
-        "checado:java.lang.Boolean"
+        "checado:java.lang.Boolean",
+        "POC:POC"
       ],
       "attrs": {
         ".": {
@@ -854,27 +856,27 @@
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "height": 60,
+          "height": 100,
           "stroke": "#C2C2C2",
           "transform": "translate(0,40)"
         },
         ".uml-class-attrs-text": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
-          "text": "* item\nchecado\n"
+          "text": "* id\nitem\nchecado\nPOC\n"
         },
         ".uml-class-attrs-value": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
           "ref-x": 149,
-          "text": "Texto\nLógico\n"
+          "text": "Texto\nTexto\nLógico\nPOC\n"
         },
         ".uml-class-methods-rect": {
           "fill": "#F0F0F0",
           "height": 20,
           "stroke": "#C2C2C2",
           "stroke-width": 1,
-          "transform": "translate(0,100)"
+          "transform": "translate(0,140)"
         },
         ".uml-class-methods-text": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -896,19 +898,53 @@
       "audit": false,
       "fields": [
         {
+          "name": "id",
+          "type": "java.lang.String",
+          "dbName": "id",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
+          "label": "Id",
+          "mask": "",
+          "isPrimaryKey": true,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "UUID",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "isIndex": false,
+          "useOuterJoin": false
+        },
+        {
           "name": "item",
           "type": "java.lang.String",
           "dbName": "item",
           "dbLength": "",
           "dbPrecision": "",
           "dbScale": "",
-          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
+          "dbDefaultValue": "",
           "label": "Item",
           "mask": "",
-          "isPrimaryKey": true,
+          "isPrimaryKey": false,
           "isUniqueKey": false,
           "isNullable": true,
-          "pkType": "UUID",
+          "pkType": "",
           "multitenantContext": "",
           "jsonIgnore": false,
           "isTransient": false,
@@ -962,6 +998,40 @@
           "foreignKeyName": "",
           "isIndex": false,
           "useOuterJoin": false
+        },
+        {
+          "name": "POC",
+          "type": "POC",
+          "dbName": "fk_POC",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "POC",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "isIndex": false,
+          "useOuterJoin": false
         }
       ],
       "generateView": "Auto",
@@ -980,13 +1050,14 @@
       "role": "Class",
       "runtimeClass": "cronos.widgets.joint.uml.Class",
       "size": {
-        "height": 120,
+        "height": 140,
         "width": 195
       },
       "swagger": false,
       "tableName": "",
       "tableScheme": null,
       "type": "uml.Class",
+      "usePhysicalNames": false,
       "z": 47
     },
     {
@@ -5724,6 +5795,51 @@
     {
       "associationType": "Association",
       "attrs": {
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        },
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        }
+      },
+      "id": "7cbe4df7-6019-4ddc-af87-d13d8d084bf9",
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "name": null,
+      "queries": [],
+      "relationFields": [
+        "POC:target"
+      ],
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "source": {
+        "id": "4dfc833f-7fa7-43f3-a9c3-2e6c705aac57"
+      },
+      "target": {
+        "id": "a0c9d536-5fb5-4788-a846-2cb3aae25c13"
+      },
+      "type": "uml.Composition",
+      "vertices": [],
+      "z": 49
+    },
+    {
+      "associationType": "Association",
+      "attrs": {
         ".": {
           "display": "none"
         },
@@ -6352,10 +6468,10 @@
       ],
       "groupPositions": [
         {
-          "idCell": "052c2366-6790-4df4-9f64-635d67618a7a",
+          "idCell": "da710830-22ba-465d-8c8e-6a5ee5fba3c5",
           "position": {
-            "x": 648,
-            "y": 79
+            "x": 418,
+            "y": 64
           }
         },
         {
@@ -6366,45 +6482,10 @@
           }
         },
         {
-          "idCell": "9e3ef124-c979-41a1-b403-685262c70f4d",
-          "position": {
-            "x": 884,
-            "y": 620
-          }
-        },
-        {
           "idCell": "ae989b61-1d14-4485-ae26-6cf3464f4353",
           "position": {
             "x": 90,
             "y": 428
-          }
-        },
-        {
-          "idCell": "98ba863d-d43f-4a78-9607-0c71eacec0c5",
-          "position": {
-            "x": 948,
-            "y": 620
-          }
-        },
-        {
-          "idCell": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
-          "position": {
-            "x": 982,
-            "y": 194
-          }
-        },
-        {
-          "idCell": "cb2fc484-6ff9-4cac-aea5-fcbf7c0cea6d",
-          "position": {
-            "x": 868,
-            "y": 580
-          }
-        },
-        {
-          "idCell": "da710830-22ba-465d-8c8e-6a5ee5fba3c5",
-          "position": {
-            "x": 418,
-            "y": 64
           }
         },
         {
@@ -6415,10 +6496,45 @@
           }
         },
         {
+          "idCell": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
+          "position": {
+            "x": 982,
+            "y": 194
+          }
+        },
+        {
+          "idCell": "98ba863d-d43f-4a78-9607-0c71eacec0c5",
+          "position": {
+            "x": 948,
+            "y": 620
+          }
+        },
+        {
+          "idCell": "9e3ef124-c979-41a1-b403-685262c70f4d",
+          "position": {
+            "x": 884,
+            "y": 620
+          }
+        },
+        {
+          "idCell": "cb2fc484-6ff9-4cac-aea5-fcbf7c0cea6d",
+          "position": {
+            "x": 868,
+            "y": 580
+          }
+        },
+        {
           "idCell": "a0c9d536-5fb5-4788-a846-2cb3aae25c13",
           "position": {
             "x": 206,
             "y": 48
+          }
+        },
+        {
+          "idCell": "052c2366-6790-4df4-9f64-635d67618a7a",
+          "position": {
+            "x": 648,
+            "y": 79
           }
         }
       ]
@@ -6455,41 +6571,6 @@
       ],
       "groupPositions": [
         {
-          "idCell": "b194a533-61d6-4661-b9da-ff80ce2835f9",
-          "position": {
-            "x": 70,
-            "y": 240
-          }
-        },
-        {
-          "idCell": "dcc00b32-aa33-47bd-bc4d-91da88f25cbc",
-          "position": {
-            "x": 656,
-            "y": 312
-          }
-        },
-        {
-          "idCell": "4cbe47fe-4f4b-43e9-960b-4b5cc2633aef",
-          "position": {
-            "x": 404,
-            "y": 342
-          }
-        },
-        {
-          "idCell": "36b875ac-204a-4346-82e4-aabbd2c6b202",
-          "position": {
-            "x": 940,
-            "y": 594
-          }
-        },
-        {
-          "idCell": "56d9e678-741d-41e6-9b24-bccc58de1598",
-          "position": {
-            "x": 1106,
-            "y": 406
-          }
-        },
-        {
           "idCell": "d92238a3-a37d-4cc6-a543-d0687dc207cd",
           "position": {
             "x": 100,
@@ -6497,10 +6578,17 @@
           }
         },
         {
-          "idCell": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
+          "idCell": "b194a533-61d6-4661-b9da-ff80ce2835f9",
           "position": {
-            "x": 984,
-            "y": 38
+            "x": 70,
+            "y": 240
+          }
+        },
+        {
+          "idCell": "36b875ac-204a-4346-82e4-aabbd2c6b202",
+          "position": {
+            "x": 940,
+            "y": 594
           }
         },
         {
@@ -6518,6 +6606,48 @@
           }
         },
         {
+          "idCell": "e35a650f-29ee-4683-8c1c-5cc61a955ddf",
+          "position": {
+            "x": 668,
+            "y": 594
+          }
+        },
+        {
+          "idCell": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
+          "position": {
+            "x": 984,
+            "y": 38
+          }
+        },
+        {
+          "idCell": "56d9e678-741d-41e6-9b24-bccc58de1598",
+          "position": {
+            "x": 1106,
+            "y": 406
+          }
+        },
+        {
+          "idCell": "53b97115-f8a3-4221-9ce6-bad2672b8bd5",
+          "position": {
+            "x": 418,
+            "y": 594
+          }
+        },
+        {
+          "idCell": "4cbe47fe-4f4b-43e9-960b-4b5cc2633aef",
+          "position": {
+            "x": 404,
+            "y": 342
+          }
+        },
+        {
+          "idCell": "dcc00b32-aa33-47bd-bc4d-91da88f25cbc",
+          "position": {
+            "x": 656,
+            "y": 312
+          }
+        },
+        {
           "idCell": "fabe0aea-c05d-44a4-a87c-2e2c0a97e994",
           "position": {
             "x": 382,
@@ -6529,20 +6659,6 @@
           "position": {
             "x": 144,
             "y": 530
-          }
-        },
-        {
-          "idCell": "53b97115-f8a3-4221-9ce6-bad2672b8bd5",
-          "position": {
-            "x": 418,
-            "y": 594
-          }
-        },
-        {
-          "idCell": "e35a650f-29ee-4683-8c1c-5cc61a955ddf",
-          "position": {
-            "x": 668,
-            "y": 594
           }
         }
       ]

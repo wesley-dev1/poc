@@ -1,4 +1,8 @@
-<div class="component-holder ng-binding ng-scope crn-navigator-horizontal" data-component="crn-navbar" id="main-nav-bar" tabindex="-1">
+<style title="local">
+div#main-nav-bar .navbar { 
+  opacity: 1;
+}
+</style><div class="component-holder ng-binding ng-scope crn-navigator-horizontal" data-component="crn-navbar" id="main-nav-bar" tabindex="-1">
   <nav class="navbar navbar-default">
     <ul aria-label="{{'DirectAccess' | translate}}" class="main-access" tabindex="-1">
         <li><a crn-anchor="main-view" href="javascript:void(0);" class="main-nav-link" alt="{{'MainContent' | translate}}">{{'MainContent' | translate}}</a> </li>
@@ -34,7 +38,9 @@
     </div>
   </nav>
 </div><div ui-view="" id="main-view" tabindex="-1" role="main" class="container-fluid main-view main-view-horizontal">
-    <h1 class="component-holder text-left h3 title">{{'Home.view.Home' | translate}}</h1>
+    <h1 class="component-holder text-left h3 title">{{'Home.view.Home' | translate}}<cron-ordered-list list-type="ordered-list" attribute-value="decimal" ordered-attribute-value="disc" data-component="crn-ordered-list-act" id="crn-ordered-list-act-402282">
+    
+  </cron-ordered-list></h1>
 </div><div class="modal fade" id="modalPassword">
   <div class="modal-dialog">
     <div class="modal-content">

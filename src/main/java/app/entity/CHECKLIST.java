@@ -31,8 +31,16 @@ public class CHECKLIST implements Serializable {
     * @generated
     */
     @Id
-    @Column(name = "item", nullable = true, insertable=true, updatable=true)
-        private java.lang.String item = UUID.randomUUID().toString().toUpperCase();
+    @Column(name = "id", nullable = true, insertable=true, updatable=true)
+        private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
+
+
+    /**
+    * @generated
+    */
+    @Column(name = "item", nullable = true, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.String item;
 
 
     /**
@@ -44,12 +52,39 @@ public class CHECKLIST implements Serializable {
 
 
     /**
+    * @generated
+    */
+    @ManyToOne
+    @JoinColumn(name="fk_POC", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
+        
+        private POC poC;
+
+
+    /**
     * Construtor
     * @generated
     */
     public CHECKLIST(){
     }
 
+    /**
+    * Obtém id
+    * return id
+    * @generated
+    */
+    public java.lang.String getId() {
+        return this.id;
+    }
+
+    /**
+    * Define id
+    * @param id id
+    * @generated
+    */
+    public CHECKLIST setId(java.lang.String id) {
+        this.id = id;
+        return this;
+    }
     /**
     * Obtém item
     * return item
@@ -86,6 +121,24 @@ public class CHECKLIST implements Serializable {
         this.checado = checado;
         return this;
     }
+    /**
+    * Obtém poC
+    * return poC
+    * @generated
+    */
+    public POC getPoC() {
+        return this.poC;
+    }
+
+    /**
+    * Define poC
+    * @param poC poC
+    * @generated
+    */
+    public CHECKLIST setPoC(POC poC) {
+        this.poC = poC;
+        return this;
+    }
 
     /**
     * @generated
@@ -95,7 +148,7 @@ public class CHECKLIST implements Serializable {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
 CHECKLIST object = (CHECKLIST)obj;
-        if (item != null ? !item.equals(object.item) : object.item != null) return false;
+        if (id != null ? !id.equals(object.id) : object.id != null) return false;
         return true;
     }
 
@@ -105,7 +158,7 @@ CHECKLIST object = (CHECKLIST)obj;
     @Override
     public int hashCode() {
         int result = 1;
-        result = 31 * result + ((item == null) ? 0 : item.hashCode());
+        result = 31 * result + ((id == null) ? 0 : id.hashCode());
         return result;
     }
 

@@ -15,7 +15,41 @@ public static final int TIMEOUT = 300;
 /**
  *
  * @author Wesley Miranda De Oliveira
- * @since 01/09/2022 10:49:36
+ * @since 02/09/2022 08:30:20
+ *
+ */
+public static Var AbrirModalTarefas() throws Exception {
+ return new Callable<Var>() {
+
+   public Var call() throws Exception {
+    cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.showModal"),
+    Var.valueOf("modal47418"));
+    return Var.VAR_NULL;
+   }
+ }.call();
+}
+
+/**
+ *
+ * @author Wesley Miranda De Oliveira
+ * @since 02/09/2022 08:30:20
+ *
+ */
+public static Var FecharModalTarefas() throws Exception {
+ return new Callable<Var>() {
+
+   public Var call() throws Exception {
+    cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.hideModal"),
+    Var.valueOf("modal47418"));
+    return Var.VAR_NULL;
+   }
+ }.call();
+}
+
+/**
+ *
+ * @author Wesley Miranda De Oliveira
+ * @since 02/09/2022 08:30:20
  *
  */
 public static Var fa_C3_A7a_algo() throws Exception {
@@ -59,29 +93,10 @@ public static Var fa_C3_A7a_algo() throws Exception {
 
 /**
  *
- * @author Wesley Miranda De Oliveira
- * @since 01/09/2022 10:49:36
- *
- */
-public static Var fa_C3_A7a_algo2() throws Exception {
- return new Callable<Var>() {
-
-   private Var Usuario = Var.VAR_NULL;
-   private Var UsuarioId = Var.VAR_NULL;
-   private Var item = Var.VAR_NULL;
-
-   public Var call() throws Exception {
-    return Var.VAR_NULL;
-   }
- }.call();
-}
-
-/**
- *
  * Bloco
  *
  * @author Wesley Miranda De Oliveira
- * @since 01/09/2022 10:49:36
+ * @since 02/09/2022 08:30:20
  *
  */
 public static Var userOn() throws Exception {
